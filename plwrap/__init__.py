@@ -43,7 +43,7 @@ def query(Target: dataclass):
             async with db.acquire() as conn:
                 sql_query = await query(*args, **kwargs)
                 logging.debug(f"Running SQL query: {sql_query}")
-                # Looks dirty but the performance is best when using a list 
+                # Looks dirty but the performance is best when using a list
                 # comprehension
                 #
                 # Run SQL Query -> convert each result to a dictionary
@@ -68,4 +68,3 @@ def one(query):
         res = await query(*args, **kwargs)
         return res[0] if res else None
     return wrapper
-
