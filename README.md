@@ -5,7 +5,7 @@
 > **SQL is awesome. Try to remember! :-)**
 
 ## Sanic integration
-When used together with sanic, it is possible to contain 
+When used together with sanic, `plwrap` uses the sanic logging framework for debugging queries
 
 
 ## Examples
